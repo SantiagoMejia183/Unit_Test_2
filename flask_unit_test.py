@@ -18,7 +18,7 @@ class testFlask(unittest.TestCase):
         response = c.get('/retirement/')
         if response.data:
             print('true')
-        elif response.data:
+        else:
             print('false')
 
     def test_distance_data(self):
@@ -26,7 +26,7 @@ class testFlask(unittest.TestCase):
         response = c.get('/distance/')
         if response.data:
             print('true')
-        elif response.data:
+        else:
             print('false')
 
 if __name__ == "__main__":
