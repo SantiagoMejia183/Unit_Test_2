@@ -30,7 +30,6 @@ pipeline {
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose build
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose down
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose up
-                    
                     """
                  
                 }  
