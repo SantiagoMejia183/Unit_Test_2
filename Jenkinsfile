@@ -27,9 +27,11 @@ pipeline {
                 sh """
                     pip3 install  --user docker-compose
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose version
+                    docker-compose build
+                    docker-compose up
+                    pip install --user -r req.txt
+                    python flask_unit_test.py
                     """
-                sh 'pip install --user -r req.txt'
-                sh 'python flask_unit_test.py'
                  
                 }  
                
