@@ -6,11 +6,11 @@ from flask_python import app
 class testFlask(unittest.TestCase):
     def test_distance_response(self):
         openOrNot = DBTest.open_connection(self)
-        self.assertEqual(openOrNot)
+        self.assert(openOrNot)
 
     def test_retirement_response(self):
         openOrNot = DBTest.open_connection(self)
-        self.assertEqual(openOrNot)
+        self.assert(openOrNot)
 
     def test_retirement_data(self):
         dataAvl = DBTest.store_data(self)
