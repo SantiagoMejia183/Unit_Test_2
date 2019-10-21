@@ -2,7 +2,7 @@ version: '2'
 services:
   app:
     build:
-      context: Unit_Test_2
+      context: docker-compose.yml
       dockerfile: Dockerfile
     ports:
      - "5000:5000"
