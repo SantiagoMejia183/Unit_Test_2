@@ -28,8 +28,9 @@ pipeline {
                     pip3 install  --user docker-compose
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose version
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose build
+                    /var/jenkins_home/workspace/test/.local/bin/docker-compose down
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose up
-                    /var/jenkins_home/workspace/test/.local/bin/docker-compose down --rmi all
+                    
                     """
                  
                 }  
