@@ -23,6 +23,7 @@ pipeline {
            steps {
                 withEnv(["HOME=${env.WORKSPACE}"]){
                 sh """
+                    apt-get install docker-compose
                     pip install  --user docker-compose
                     docker-compose version
                     """
