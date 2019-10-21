@@ -1,5 +1,9 @@
 from databaseFunc import databaseNeeds
 from pymongo import MongoClient
+from pymongo import Connection
+
+c = Connection(host = 0.0.0.0, port = 27017)
+c.test_database
 
 from flask import Flask
 client = MongoClient("mongodb://localhost:27017/")
