@@ -27,8 +27,6 @@ pipeline {
                 sh """
                     pip3 install  --user docker-compose
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose version
-                    /var/jenkins_home/workspace/test/.local/bin/docker-compose build
-                    /var/jenkins_home/workspace/test/.local/bin/docker-compose up
                     ls
                     cd ..
                     ls 
