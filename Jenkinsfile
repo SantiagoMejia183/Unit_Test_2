@@ -22,10 +22,11 @@ pipeline {
         stage('Test 2') {
            steps {
                 withEnv(["HOME=${env.WORKSPACE}"]){
-                 echo $PATH
+          
+                    
                 sh """
                     pip3 install  --user docker-compose
-                    docker-compose version
+                    /var/jenkins_home/workspace/test/.local/bin/docker-compose version
                     """
                 sh 'pip install --user -r req.txt'
                 sh 'python flask_unit_test.py'
