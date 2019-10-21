@@ -24,7 +24,7 @@ pipeline {
                 withEnv(["HOME=${env.WORKSPACE}"]){
                 sh """
                     pip install  --user docker-compose
-                    docker-compose up -d
+                    docker-compose version
                     """
                 sh 'pip install --user -r req.txt'
                 sh 'python flask_unit_test.py'
