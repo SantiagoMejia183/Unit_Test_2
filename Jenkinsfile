@@ -4,9 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               
-            
-                
                 echo 'Hello testing world'
             }
         }
@@ -17,9 +14,7 @@ pipeline {
                 sh 'pip install --user -r req.txt'
                 sh 'python Assignment2_test_doubles.py'
               
-                }  
-             
-               echo 'swag'
+                } 
                
             }
         }
@@ -27,11 +22,9 @@ pipeline {
         stage('Test 2') {
            steps {
                 withEnv(["HOME=${env.WORKSPACE}"]){
-                sh 'docker-compose up -d'
                 sh 'pip install --user -r req.txt'
                 sh 'python flask_unit_test.py'
-              
-               
+                 
                 }  
                
            }
