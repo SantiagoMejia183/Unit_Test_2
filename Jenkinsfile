@@ -22,7 +22,10 @@ pipeline {
         stage('Test 2') {
            steps {
                 withEnv(["HOME=${env.WORKSPACE}"]){
-                sh 'docker-compose up -d'
+                sh """
+                    pip install docker-compose
+                    docker-compose up -d
+                    """
                 sh 'pip install --user -r req.txt'
                 sh 'python flask_unit_test.py'
                  
