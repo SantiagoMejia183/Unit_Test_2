@@ -2,8 +2,8 @@ version: '2'
 services:
   app:
     build:
-      context: ./
-      dockerfile: DockerFile
+      context: app
+      dockerfile: Unit_Test_2/DockerFile
     ports:
      - "5000:5000"
     links:
