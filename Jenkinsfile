@@ -29,8 +29,9 @@ pipeline {
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose version
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose build
                     /var/jenkins_home/workspace/test/.local/bin/docker-compose up
-                    pip install --user -r req.txt
-                    python flask_unit_test.py
+                    ls
+                    cd ..
+                    ls 
                     """
                  
                 }  
