@@ -3,7 +3,7 @@ from pymongo import MongoClient
 
 
 from flask import Flask
-client = MongoClient("mongo://localhost:27017/")
+client = MongoClient("mongodb://localhost:27017/")
 db = client.assign2
 results = db["results"]
 entries = db["entries"]
