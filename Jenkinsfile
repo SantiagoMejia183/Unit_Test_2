@@ -22,6 +22,7 @@ pipeline {
         stage('Test 2') {
            steps {
                 withEnv(["HOME=${env.WORKSPACE}"]){
+                 echo $PATH
                 sh """
                     pip3 install  --user docker-compose
                     docker-compose version
