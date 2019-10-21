@@ -1,5 +1,5 @@
 FROM python:3.6
-WORKDIR /app
-COPY . /app
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
-CMD ["python", "app.py"]
+WORKDIR /flask_unit_test
+COPY . /flask_unit_test
+RUN pip install --trusted-host pypi.python.org -r req.txt
+CMD ["python", "flask_unit_test.py"]
